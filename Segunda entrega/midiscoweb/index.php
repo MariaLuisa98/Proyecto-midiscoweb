@@ -2,7 +2,6 @@
 
 session_start();
 include_once 'app/config.php';
-include_once 'app/controlerFile.php';
 include_once 'app/controlerUser.php';
 include_once 'app/modeloUserDB.php';
 

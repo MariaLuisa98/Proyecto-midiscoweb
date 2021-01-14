@@ -1,8 +1,8 @@
 <?php
 
 define ('GESTIONUSUARIOS','1');
-define ('GESTIONFICHEROS','2');
-define('SERVER_DB','localhost');
+
+
 
 // Fichero donde se guardan los datos
 define('FILEUSER','app/dat/Usuarios.sql');

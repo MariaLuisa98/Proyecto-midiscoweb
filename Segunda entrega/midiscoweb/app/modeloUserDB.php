@@ -17,8 +17,8 @@ public static function init() {
     
     if(self::$db==null) {
         try {
-            $dsn="msql:host=".DBSERVER.";dbname=".DBNAME.";charset=utf8";
-            self::$db=new PDO($dsn,DBUSER,DBPASSWORD);
+            $dsn="msql:host=192.168.1.132;dbname=midiscoweb;charset=utf8";
+            self::$db=new PDO($dsn,'root','root');
             self::$db->setAttribute(PDO::ATTR_ERRMODE,PDO::ERRMODE_EXCEPTION);
         } catch (PDOException $m) {
             echo "Error de conexión ".$m->getMessage();
@@ -190,7 +190,7 @@ public static function modeloUserGetAll ():array {
             PLANES[$cod["plan"]],
             ESTADOS[$cod["estados"]]
         ];
-        usuarios[$cod["user"]]=$datosuser;
+        $usuarios[$cod["user"]]=$datosuser;
     }
     return $usuarios;
 }
